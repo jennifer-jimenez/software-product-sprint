@@ -11,6 +11,23 @@
   width: 45%;
 }
 
+.logos {
+  display: inline-block;
+  justify-content: right;
+  text-align: right;
+  width: 50%;
+  padding: 0;
+}
+
+#logo {
+  display: inline-block;
+  justify-content: right;
+  text-align: right;
+  height: 40px;
+  padding-left: 20px;
+  vertical-align: bottom;
+}
+
 #profile {
   display: inline-block;
   text-align: center;
@@ -36,16 +53,23 @@
   height: 315px;
   width: 560px;
 }
-h1 {
+
+header {
   background-color: #20639b;
+}
+h1 {
   color: white;
+  display: inline-block;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 36px;
   font-weight: 400;
   margin: 0;
+  /* margin-block-start: 0;
+  margin-block-end: 0; */
   padding-bottom: 15px;
   padding-left: 50px;
   padding-top: 15px;
+  width: 42%;
 }
 
 h2 {
