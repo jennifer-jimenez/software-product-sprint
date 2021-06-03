@@ -11,13 +11,16 @@
     </header>
     <nav>
       <ul class="navbar">
-        <li>Home</li>
-        <li>Projects & Work</li>
-        <li>Gallery</li>
+        <li><a href="index.html" class="nav_link"><u>Home</u></a></li>
+        <li><a href="projects.html" class="nav_link">Projects & Work</a></li>
+        <li><a href="gallery.html" class="nav_link">Gallery</a></li>
       </ul>
     </nav>
-    <body>
-    <div id="content">
+
+  <body>
+  <div id="wrapper">
+    <div id="text">
+    <h2>ABOUT ME</h2>
       <p>
         Hello! My name is Jennifer and I am rising junior at Yale University studying computer science. I am a proud 
         member of Trumbull College at Yale. On campus, I am involved with the Yale Undergraduate Prison Project as 
@@ -35,11 +38,18 @@
         like to paint (I'm bad at it) and play guitar, though I don't do it as much as I would like to. During quarantine
         I got into skateboarding a little bit and I would like to continue during the summer. :)
       </p>
-      <img src="/images/jen_nyc.jpg" id="profile_pic"/>
-      <h2>Get to know me more!</h2>
-        <p>Click here to learn a random fact about me:</p>
+
+  <h2>Get to know me more!</h2>
+    <p>Click here to learn a random fact about me:</p>
+    <!-- TODO:  Query to JS file -->
       <button onclick="addRandomGreeting()">Jen Fact!</button>
-      <div id="greeting-container"></div>   
+      <div id="greeting-container"></div> 
     </div>
+
+    <div id="profile">
+      <img src="/images/jen_nyc.jpg" id="profile_pic"/>
+    </div>
+  </div>
+
   </body>
 </html>
