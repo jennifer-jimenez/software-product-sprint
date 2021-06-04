@@ -7,46 +7,52 @@
     <script src="script.js"></script>
   </head>
 
-  <header>
-    <h1>JENNIFER JIMENEZ</h1>
-    <div class="logos">
-      <a href="https://www.linkedin.com/in/jen-jimenez" target="_blank"> 
-        <img src="/images/linkedin.png" id="logo"/>
-      </a>
-      <a href="https://github.com/jennifer-jimenez" target="_blank"> 
-        <img src="/images/git.png" id="logo"/>
-      </a>
-      <a href="https://www.instagram.com/prettyoddjen/" target="_blank"> 
-        <img src="/images/ig.png" id="logo"/>
-      </a>
-    </div>
-  </header>
-  <nav>
-    <ul class="navbar">
-      <li><a href="index.html" class="nav_link">Home</a></li>
-       <li><a href="projects.html" class="nav_link"><u>Projects</u></a></li>
-      <li><a href="gallery.html" class="nav_link">Gallery</a></li>
-    </ul>
-  </nav>
-
   <body>
-  <div id="projects">
-    <h2>Schedule Pro</h2>
-    <p>
-      Schedule Pro is a web app that takes a user’s weekly non-negotiable scheduled tasks (e.g. class, work) as 
-      well as tasks that can be completed any time (e.g. going to the store) and optimizes their route based on 
-      distance. Distance is calculated using data from Google Maps Distance Matrix API. The web app was created 
-      using the Flask microframework (incorporates Python, HTML/CSS, Jinja, and SQL).
-    </p>
-    <iframe id="video" src="https://www.youtube.com/embed/3tKCzG9TkoY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <br><br>
-    <h2>Havenly Treats</h2>
-    <p>
-      Havenly Treats is a non-profit organization run for and by refugee women. As an intern, I helped them develop
-      their first website in early 2020. The website was built using ReactJS.
-    </p>
-    <img src="images/havenly.png" class="havenly"/>
-    <img src="images/havenly_products.png" class="havenly"/>
-</div>
-</body>
+    <header>
+      <h1>JENNIFER JIMENEZ</h1>
+      <div class="logos">
+        <a href="https://www.linkedin.com/in/jen-jimenez" target="_blank"> 
+          <img src="/images/linkedin.png" class="logo"/>
+        </a>
+        <a href="https://github.com/jennifer-jimenez" target="_blank"> 
+          <img src="/images/git.png" class="logo"/>
+        </a>
+        <a href="https://www.instagram.com/prettyoddjen/" target="_blank"> 
+          <img src="/images/ig.png" class="logo"/>
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html" class="nav_link">Home</a></li>
+         <li><a href="projects.html" class="nav_link" id="current">Projects</a></li>
+        <li><a href="gallery.html" class="nav_link">Gallery</a></li>
+      </ul>
+    </nav>
+
+    <div class="projects">
+      <h2>Schedule Pro</h2>
+      <p>
+        Schedule Pro is a web app that takes a user’s weekly non-negotiable scheduled tasks (e.g. class, work) as 
+        well as tasks that can be completed any time (e.g. going to the store) and optimizes their route based on 
+        distance. Distance is calculated using data from Google Maps Distance Matrix API. The web app was created 
+        using the Flask microframework (incorporates Python, HTML/CSS, Jinja, and SQL).
+      </p>
+      <iframe 
+          id="video" 
+          src="https://www.youtube.com/embed/3tKCzG9TkoY" 
+          title="YouTube video player" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+      </iframe>
+
+      <h2>Havenly Treats</h2>
+      <p>
+        Havenly Treats is a non-profit organization run for and by refugee women. As an intern, I helped them develop
+        their first website in early 2020. The website was built using ReactJS.
+      </p>
+      <img src="images/havenly.png" class="havenly"/>
+      <img src="images/havenly_products.png" class="havenly"/>
+    </div>
+  </body>
 </html>

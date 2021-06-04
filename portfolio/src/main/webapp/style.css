@@ -1,59 +1,3 @@
-#wrapper {
-  margin-top: 5px;
-}
-
-#text {
-  display: inline-block;
-  justify-content: center;
-  padding-left: 8%;
-  text-align: left;
-  vertical-align: top;
-  width: 45%;
-}
-
-.logos {
-  display: inline-block;
-  justify-content: right;
-  text-align: right;
-  width: 50%;
-  padding: 0;
-}
-
-#logo {
-  display: inline-block;
-  justify-content: right;
-  text-align: right;
-  height: 40px;
-  padding-left: 20px;
-  vertical-align: bottom;
-}
-
-#profile {
-  display: inline-block;
-  text-align: center;
-  width: 45%;
-}
-
-#profile_pic {
-  margin: 30px;
-  width: 330px;
-}
-
-#greeting-container {
-  margin-top: 20px;
-}
-
-#projects {
-  margin-left: 8%;
-  margin-right: 8%;
-  text-align: center;
-}
-#video {
-  border: 0;
-  height: 315px;
-  width: 560px;
-}
-
 header {
   background-color: #20639b;
 }
@@ -64,8 +8,6 @@ h1 {
   font-size: 36px;
   font-weight: 400;
   margin: 0;
-  /* margin-block-start: 0;
-  margin-block-end: 0; */
   padding-bottom: 15px;
   padding-left: 50px;
   padding-top: 15px;
@@ -113,8 +55,74 @@ nav {
   text-decoration: underline;
 }
 
+.logos {
+  display: inline-block;
+  justify-content: right;
+  padding: 0;
+  text-align: right;
+  width: 50%;
+}
+
+.logo {
+  display: inline-block;
+  height: 40px;
+  justify-content: right;
+  padding-left: 20px;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.wrapper {
+    margin-top: 10px;
+}
+
+.bio {    
+  display: inline-block;
+  justify-content: center;
+  padding-left: 8%;
+  text-align: left;
+  vertical-align: top;
+  width: 45%;
+}
+
+#profile {
+  display: inline-block;
+  text-align: center;
+  width: 45%;
+}
+
+#profile_pic {
+  margin: 30px;
+  width: 330px;
+}
+
+#fact-container {
+  margin-top: 20px;
+}
+
 .havenly {
   display: inline-block;
   height: 315px;
   margin: 15px;
 }
+
+.projects {
+  margin-left: 8%;
+  margin-right: 8%;
+  text-align: center;
+}
+#video {
+  border: 0;
+  height: 315px;
+  margin-bottom: 20px;
+  width: 560px;
+}
+
+#current {
+  text-decoration: underline;
+}
+
+/* .gallery {
+    display: inline-flex;
+    height: 300px;
+} */
