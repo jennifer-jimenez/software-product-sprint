@@ -6,40 +6,61 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
+
+  <body>
     <header>
       <h1>JENNIFER JIMENEZ</h1>
+      <div class="logos">
+        <a href="https://www.linkedin.com/in/jen-jimenez" target="_blank"> 
+          <img src="/images/linkedin.png" class="logo"/>
+        </a>
+        <a href="https://github.com/jennifer-jimenez" target="_blank"> 
+          <img src="/images/git.png" class="logo"/>
+        </a>
+        <a href="https://www.instagram.com/prettyoddjen/" target="_blank"> 
+          <img src="/images/ig.png" class="logo"/>
+        </a>
+      </div>
     </header>
     <nav>
       <ul class="navbar">
-        <li>Home</li>
-        <li>Projects & Work</li>
-        <li>Gallery</li>
+        <li><a href="index.html" class="nav_link" id="current">Home</a></li>
+        <li><a href="projects.html" class="nav_link">Projects</a></li>
+        <li><a href="gallery.html" class="nav_link">Gallery</a></li>
       </ul>
     </nav>
-    <body>
-    <div id="content">
-      <p>
-        Hello! My name is Jennifer and I am rising junior at Yale University studying computer science. I am a proud 
-        member of Trumbull College at Yale. On campus, I am involved with the Yale Undergraduate Prison Project as 
-        a GED tutor for justice-impacted individuals. My main programming language is C, but I have also worked with 
-        Python, SQL, and a little JavaScript. I have worked with HTML/CSS for a while, both on their own and within 
-        the React framework. 
-      </p>
-      <p>
-        I am originally from San Bernardino, California, which is where I am currently located. I love spending time
+
+    <div class=wrapper>
+      <div class="bio">
+        <h2>ABOUT ME</h2>
+        <p>
+          Hello! My name is Jennifer and I am rising junior at Yale University studying computer science. I am a proud 
+          member of Trumbull College at Yale. On campus, I am involved with the Yale Undergraduate Prison Project as 
+          a GED tutor for justice-impacted individuals. My main programming language is C, but I have also worked with 
+          Python, SQL, and a little JavaScript. I have worked with HTML/CSS for a while, both on their own and within 
+          the React framework. 
+        </p>
+        <p>
+          I am originally from San Bernardino, California, which is where I am currently located. I love spending time
         outdoors, whether just in my own yard, a nearby park, or some other nearby attraction. Being located in the Inland 
         Empire means I have mountains, the beach, and the desert all within my reach, which I am very grateful for!
-      </p>
-      <p>
-        In my free time, I like to go on walks, do yoga, rewatch my favorite shows, and listen to music. I also
-        like to paint (I'm bad at it) and play guitar, though I don't do it as much as I would like to. During quarantine
-        I got into skateboarding a little bit and I would like to continue during the summer. :)
-      </p>
-      <img src="/images/jen_nyc.jpg" id="profile_pic"/>
-      <h2>Get to know me more!</h2>
+        </p>
+        <p>
+          In my free time, I like to go on walks, do yoga, rewatch my favorite shows, and listen to music. I also
+          like to paint (I'm bad at it) and play guitar, though I don't do it as much as I would like to. During quarantine
+          I got into skateboarding a little bit and I would like to continue during the summer. :)
+        </p>
+
+        <h2>Get to know me more!</h2>
         <p>Click here to learn a random fact about me:</p>
-      <button onclick="addRandomGreeting()">Jen Fact!</button>
-      <div id="greeting-container"></div>   
+        <!-- TODO:  Query to JS file -->
+          <button onclick="addRandomFact()">Jen Fact!</button>
+          <div id="fact-container"></div> 
+      </div>
+
+      <div id="profile">
+        <img src="/images/jen_nyc.jpg" id="profile_pic"/>
+      </div>
     </div>
   </body>
 </html>
