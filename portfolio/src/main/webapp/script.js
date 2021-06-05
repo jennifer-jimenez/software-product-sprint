@@ -13,16 +13,24 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
+ * Adds a random fact to the page.
  */
 function addRandomFact() {
   const facts =
       ['My favorite color is blue. :)', 'I\'m a big coffee person.', 'I am of Mexican descent.', 'My top genres on Spotify are rock, indie, rap, and Latin!'];
 
-  // Pick a random greeting.
+  // Pick a random fact.
   const fact = facts[Math.floor(Math.random() * facts.length)];
 
   // Add it to the page.
   const factContainer = document.getElementById('fact-container');
   factContainer.innerText = fact;
+}
+
+async function addGreeting() {
+  const responseFromServer = await fetch('/hello');
+  const textFromResponse = await responseFromServer.text();
+
+  const greetingContainer = document.getElementById('greeting-container');
+  greetingContainer.innerText = textFromResponse;
 }
