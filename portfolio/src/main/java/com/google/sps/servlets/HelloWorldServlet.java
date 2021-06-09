@@ -5,14 +5,37 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import com.google.gson.Gson;
+import java.util.Random;
 
-/** Handles requests sent to the /hello URL. Try running a server and navigating to /hello! */
-@WebServlet("/hello")
+import scorex.util.ArrayList;
+
+/** Handles requests sent to the /song URL. Try running a server and navigating to /hello! */
+@WebServlet("/songs")
 public class HelloWorldServlet extends HttpServlet {
+
+  private ArrayList<String> songs = new ArrayList<String>();
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    response.setContentType("text/html;");
-    response.getWriter().println("Hi there!");
+    songs.add("\"Romantic Lover\" - Eyedress");
+    songs.add("\"88\" - Inner Wave");
+    songs.add("\"Trying Your Luck\" - The Strokes");
+
+    // had the servlet pick random song then send but tutorial specifies otherwise
+    // Random rand = new Random();
+    // int upperBound = songs.size() - 1;
+    // int randIndex = rand.nextInt(upperBound);
+
+    String json = convertToJsonUsingGson(songs);
+
+    response.setContentType("application/json;");
+    response.getWriter().println(json);
   }
+
+  private String convertToJsonUsingGson(ArrayList<String> songs) {
+  Gson gson = new Gson();
+  String json = gson.toJson(songs);
+  return json;
+  }  
 }
