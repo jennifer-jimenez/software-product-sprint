@@ -55,17 +55,32 @@
 
       <h2>Get to know me more!</h2>
       <p>Click here to learn a random fact about me:</p>
+      <div><p id="fact-container"></p></div>
       <!-- TODO:  Query to JS file -->
       <button onclick="addRandomFact()">Jen Fact!</button>
-     <div><p id="fact-container"></p></div> 
     
       <p>Click here to get a song recommendation:</p>
-      <button onclick="addRandomSong()">Get Song!</button>
       <div><p id="song-container"></p></div>
+      <button onclick="addRandomSong()">Get Song!</button>
     </div>
 
     <div id="profile">
       <img src="/images/jen_nyc.jpg" id="profile_pic"/>
+
+    <div id="contact">
+      <h2>Contact Me</h2>
+      <form action="form-handler" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="company">Company:</label>
+        <input type="text" id="company" name="company">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <label for="message">Message:</label>
+        <textarea name="text-input" id="message"></textarea>
+        <input type="submit" />
+      </form>
+    </div>
     </div>
 
   </body>
