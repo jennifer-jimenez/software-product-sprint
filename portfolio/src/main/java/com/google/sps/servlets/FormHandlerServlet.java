@@ -19,13 +19,9 @@ public class FormHandlerServlet extends HttpServlet {
     String message = request.getParameter("text-input");
 
     // Print the value so you can see it in the server logs.
-    System.out.println("Name: " + name);
-    System.out.println("Company: " + company);
-    System.out.println("Email: " + email);
-    System.out.println("Message: " + message);
-
+    System.out.println("Name: " + name + "\nCompany: " + company + "\nEmail: " + email + "\nMessage: " + message);
+    
     // Redirect user back to homepage after submit
-    // response.getWriter().println("You submitted: " + textValue);
-    response.sendRedirect("/index.html");
+    response.sendRedirect("https://jjimenez-sps-summer21.appspot.com/index.html");
   }
 }

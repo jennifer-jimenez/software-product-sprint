@@ -6,7 +6,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
-// import java.util.Random;
 
 import scorex.util.ArrayList;
 
@@ -29,8 +28,8 @@ public class HelloWorldServlet extends HttpServlet {
   }
 
   private String convertToJsonUsingGson(ArrayList<String> songs) {
-  Gson gson = new Gson();
-  String json = gson.toJson(songs);
-  return json;
+    Gson gson = new Gson();
+    String json = gson.toJson(songs);
+    return json;
   }  
 }
