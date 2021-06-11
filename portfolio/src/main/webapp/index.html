@@ -46,7 +46,7 @@
         I am originally from San Bernardino, California, which is where I am currently located. I love spending time
         outdoors, whether just in my own yard, a nearby park, or some other nearby attraction. Being located in the Inland 
         Empire means I have mountains, the beach, and the desert all within my reach, which I am very grateful for!
-        </p>
+      </p>
       <p>
         In my free time, I like to go on walks, do yoga, rewatch my favorite shows, and listen to music. I also
         like to paint (I'm bad at it) and play guitar, though I don't do it as much as I would like to. During quarantine
@@ -55,17 +55,32 @@
 
       <h2>Get to know me more!</h2>
       <p>Click here to learn a random fact about me:</p>
+      <div><p id="fact-container"></p></div>
       <!-- TODO:  Query to JS file -->
-        <button onclick="addRandomFact()">Jen Fact!</button>
-        <div id="fact-container"></div> 
+      <button onclick="addRandomFact()">Jen Fact!</button>
     
-      <p>Click here to be greeted:</p>
-      <button onclick="addGreeting()">Get Greeting!</button>
-      <div id="greeting-container"></div>
+      <p>Click here to get a song recommendation:</p>
+      <div><p id="song-container"></p></div>
+      <button onclick="addRandomSong()">Get Song!</button>
     </div>
 
     <div id="profile">
       <img src="/images/jen_nyc.jpg" id="profile_pic"/>
+
+      <div id="contact">
+        <h2>Contact Me</h2>
+        <form action="form-handler" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+          <label for="company">Company:</label>
+          <input type="text" id="company" name="company">
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email"> 
+          <label for="message">Message:</label>
+          <textarea name="text-input"></textarea>
+          <input type="submit" />
+        </form>
+      </div>
     </div>
 
   </body>

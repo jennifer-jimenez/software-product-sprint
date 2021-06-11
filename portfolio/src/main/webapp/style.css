@@ -100,14 +100,6 @@ nav {
   width: 330px;
 }
 
-#fact-container {
-  margin-top: 10px;
-}
-
-#greeting-container {
-  margin-top: 10px;
-}
-
 .havenly {
   display: inline-block;
   height: 315px;
@@ -131,7 +123,36 @@ nav {
 }
 
 .gallery {
-    display: inline-flex;
-    height: 300px;
-    padding: 5px;
+  display: inline-flex;
+  height: 300px;
+  padding: 5px;
+}
+/* 
+#contact {
+  text-align: left;
+} */
+
+input[type=text], textarea {
+  margin-bottom: 8px;
+  resize: vertical;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+input[type=submit] {
+  display: block;
+  margin: auto;
+  padding: 5px;
+}
+
+#contact {
+  background-color: aliceblue;
+  border-radius: 25px;
+  margin: 0 15% 0 15%;
+  padding: 1% 10% 5% 10%;
 }

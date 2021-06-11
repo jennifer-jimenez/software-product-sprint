@@ -27,10 +27,12 @@ function addRandomFact() {
   factContainer.innerText = fact;
 }
 
-async function addGreeting() {
-  const responseFromServer = await fetch('/hello');
-  const textFromResponse = await responseFromServer.text();
+async function addRandomSong() {
+  const responseFromServer = await fetch('/songs');
+  const textFromResponse = await responseFromServer.json();
 
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = textFromResponse;
+  const song = textFromResponse[Math.floor(Math.random() * textFromResponse.length)];
+
+  const songContainer = document.getElementById('song-container');
+  songContainer.innerText = song;
 }
