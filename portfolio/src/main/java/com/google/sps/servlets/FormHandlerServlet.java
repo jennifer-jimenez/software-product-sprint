@@ -25,17 +25,17 @@ public class FormHandlerServlet extends HttpServlet {
     
     // Store contact info in datastore
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
-    KeyFactory keyFactory = datastore.newKeyFactory().setKind("Task");
-    FullEntity taskEntity =
+    KeyFactory keyFactory = datastore.newKeyFactory().setKind("ContactInfo");
+    FullEntity contactEntity =
         Entity.newBuilder(keyFactory.newKey())
             .set("name", name)
             .set("company", company)
             .set("email", email)
             .set("message", message)
             .build();
-    datastore.put(taskEntity);
+    datastore.put(contactEntity);
 
-     // Print the value so you can see it in the server logs.
+    // Print the value so you can see it in the server logs.
     System.out.println("Name: " + name + "\nCompany: " + company + "\nEmail: " + email + "\nMessage: " + message);
 
     // Redirect user back to homepage after submit
