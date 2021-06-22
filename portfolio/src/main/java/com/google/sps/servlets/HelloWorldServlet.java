@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
+import java.util.Random;
 
 import scorex.util.ArrayList;
 
@@ -21,15 +22,20 @@ public class HelloWorldServlet extends HttpServlet {
     songs.add("\"88\" - Inner Wave");
     songs.add("\"Trying Your Luck\" - The Strokes");
 
-    String json = convertToJsonUsingGson(songs);
+    Random rand = new Random();
+    int upperBound = songs.size() - 1;
+    int randIndex = rand.nextInt(upperBound);
+
+    String json = convertToJsonUsingGson(songs.get(randIndex));
 
     response.setContentType("application/json;");
     response.getWriter().println(json);
+
   }
 
-  private String convertToJsonUsingGson(ArrayList<String> songs) {
+  private String convertToJsonUsingGson(String song) {
     Gson gson = new Gson();
-    String json = gson.toJson(songs);
+    String json = gson.toJson(song);
     return json;
   }  
 }

@@ -31,7 +31,7 @@ async function addRandomSong() {
   const responseFromServer = await fetch('/songs');
   const textFromResponse = await responseFromServer.json();
 
-  const song = textFromResponse[Math.floor(Math.random() * textFromResponse.length)];
+  const song = textFromResponse;
 
   const songContainer = document.getElementById('song-container');
   songContainer.innerText = song;
