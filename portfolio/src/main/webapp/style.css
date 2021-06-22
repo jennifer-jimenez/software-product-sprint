@@ -36,19 +36,18 @@ nav {
 }
 
 .navbar {
-    list-style-type: none;
-    margin: 0;
-    padding-inline-start: 0;
+  list-style-type: none;
+  margin: 0;
+  padding-inline-start: 0;
 }
 
 .navbar li {
-    display: inline-flex;
-    padding: 5px 100px;
+  display: inline-flex;
+  padding: 5px 100px;
 }
 
 .nav_link {
   color: white;
-  text-decoration: none;
 }
 
 .nav_link:hover {
@@ -104,17 +103,24 @@ nav {
   display: inline-block;
   height: 315px;
   margin: 15px;
+  margin-bottom: 25px;
 }
 
-.projects {
+.project {
+  background-color:  aliceblue;
+  border-radius: 20px;
+  margin-top: 2%;
   margin-left: 8%;
   margin-right: 8%;
   text-align: center;
+  padding: 10px;
 }
+
 #video {
   border: 0;
   height: 315px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  margin-top: 10px;
   width: 560px;
 }
 
@@ -127,12 +133,9 @@ nav {
   height: 300px;
   padding: 5px;
 }
-/* 
-#contact {
-  text-align: left;
-} */
 
-input[type=text], textarea {
+input[type=text], 
+textarea {
   margin-bottom: 8px;
   resize: vertical;
   width: 100%;
@@ -147,7 +150,7 @@ label {
 input[type=submit] {
   display: block;
   margin: auto;
-  padding: 5px;
+  margin-top: 10px;;
 }
 
 #contact {
@@ -155,4 +158,21 @@ input[type=submit] {
   border-radius: 25px;
   margin: 0 15% 0 15%;
   padding: 1% 10% 5% 10%;
+}
+
+button, 
+#submit {
+  background-color: #20639b;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  padding: 8px;
+}
+
+textarea {
+  font-family: arial;
+}
+
+a { 
+ text-decoration: none; 
 }
