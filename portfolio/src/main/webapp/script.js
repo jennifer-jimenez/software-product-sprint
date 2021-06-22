@@ -36,3 +36,12 @@ async function addRandomSong() {
   const songContainer = document.getElementById('song-container');
   songContainer.innerText = song;
 }
+
+async function loadContactInfo() {
+
+  const responseFromServer = await fetch('/confirm');
+  const textFromResponse = await responseFromServer.json();
+  const contactContainer = document.getElementById('contact-container');
+
+  contactContainer.innerText = "Last submission from: " + textFromResponse[0];
+}

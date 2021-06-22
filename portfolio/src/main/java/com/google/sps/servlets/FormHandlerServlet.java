@@ -10,6 +10,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.jsoup.Jsoup;
+import org.jsoup.safety.Whitelist;
 
 @WebServlet("/form-handler")
 public class FormHandlerServlet extends HttpServlet {
@@ -18,10 +20,13 @@ public class FormHandlerServlet extends HttpServlet {
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
     // Get the value entered in the form.
-    String name = request.getParameter("name");
-    String company = request.getParameter("company");
-    String email = request.getParameter("email");
-    String message = request.getParameter("text-input");
+    String name = Jsoup.clean(request.getParameter("name"), Whitelist.none());
+    String company = Jsoup.clean(request.getParameter("company"), Whitelist.none());
+    String email = Jsoup.clean(request.getParameter("email"), Whitelist.none());
+    String message = Jsoup.clean(request.getParameter("text-input"), Whitelist.none());
+    
+    //Get time submitted
+    long timestamp = System.currentTimeMillis();
     
     // Store contact info in datastore
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
@@ -32,6 +37,7 @@ public class FormHandlerServlet extends HttpServlet {
             .set("company", company)
             .set("email", email)
             .set("message", message)
+            .set("timestamp", timestamp)
             .build();
     datastore.put(contactEntity);
 
