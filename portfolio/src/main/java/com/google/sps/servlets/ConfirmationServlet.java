@@ -29,7 +29,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/** Servlet responsible for listing tasks. */
+/* Servlet responsible for listing tasks. */
 @WebServlet("/confirm")
 public class ConfirmationServlet extends HttpServlet {
 
@@ -40,25 +40,15 @@ public class ConfirmationServlet extends HttpServlet {
         Query.newEntityQueryBuilder().setKind("ContactInfo").setOrderBy(OrderBy.desc("timestamp")).build();
     QueryResults<Entity> results = datastore.run(query);
 
-    List<String []> contacts = new ArrayList<>();
-    while (results.hasNext()) {
-      Entity entity = results.next();
-
-      String name = entity.getString("name");
-      String company = entity.getString("company");
-
-      String[] contact= {name, " " + company};
-      contacts.add(contact);
-    }
+    Entity entity = results.next();
+    String name = entity.getString("name");
+    String company = entity.getString("company");
+    String contact = name + ", " + company;
 
     Gson gson = new Gson();
-    String json = gson.toJson(contacts);
-
-    //String lastSub = "Last Submission: [" + json[0] + "]";
-
-    System.out.println("contact string: " + json);
+    String contactsJson = gson.toJson(contact);
 
     response.setContentType("application/json;");
-    response.getWriter().println(json);
+    response.getWriter().println(contactsJson);
   }
 }

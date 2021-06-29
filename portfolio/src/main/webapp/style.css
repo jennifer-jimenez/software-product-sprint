@@ -8,9 +8,7 @@ h1 {
   font-size: 36px;
   font-weight: 400;
   margin: 0;
-  padding-bottom: 15px;
-  padding-left: 50px;
-  padding-top: 15px;
+  padding: 15px 0 15px 50px;
   width: 42%;
 }
 
@@ -72,10 +70,8 @@ nav {
 }
 
 .wrapper {
-  margin-top: 20px;
+  margin: 20px 8% 0 8%;
   text-align: center;
-  margin-left: 8%;
-  margin-right: 8%;  
 }
 
 .bio { 
@@ -102,25 +98,21 @@ nav {
 .havenly {
   display: inline-block;
   height: 315px;
-  margin: 15px;
-  margin-bottom: 25px;
+  margin: 15px 15px 25px 15px;
 }
 
 .project {
   background-color:  aliceblue;
   border-radius: 20px;
-  margin-top: 2%;
-  margin-left: 8%;
-  margin-right: 8%;
-  text-align: center;
+  margin: 2% 8% 0 8%;
   padding: 10px;
+  text-align: center;
 }
 
 #video {
   border: 0;
   height: 315px;
-  margin-bottom: 25px;
-  margin-top: 10px;
+  margin: 10px 0 25px 0;
   width: 560px;
 }
 
