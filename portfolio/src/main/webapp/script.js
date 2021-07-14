@@ -31,8 +31,17 @@ async function addRandomSong() {
   const responseFromServer = await fetch('/songs');
   const textFromResponse = await responseFromServer.json();
 
-  const song = textFromResponse[Math.floor(Math.random() * textFromResponse.length)];
+  const song = textFromResponse;
 
   const songContainer = document.getElementById('song-container');
   songContainer.innerText = song;
+}
+
+async function loadContactInfo() {
+
+  const responseFromServer = await fetch('/confirm');
+  const textFromResponse = await responseFromServer.json();
+  const contactContainer = document.getElementById('contact-container');
+
+  contactContainer.innerText = "Last submission from: " + textFromResponse;
 }
